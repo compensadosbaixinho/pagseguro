@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compensados Baixinho</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light my-navbar">
+        <a class="navbar-brand" href="#">Compensados Baixinho</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://compensadosbaixinho.github.io/pagseguro">PagSeguro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://compensadosbaixinho.github.io/cad_parceiro">Vendas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://compensadosbaixinho.github.io/cad_cliente_rep/">Representantes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+    <div class="header-section">
+      <h1 class="text-center mt-4">Simulador PagSeguro</h1><br/>
+      <div class="d-flex justify-content-center my-0">
+       <img src="img2.png" class="img-fluid img-custom mb-0"><br/>
+      </div>
+    </div>
+    <br/>
+    <fieldset>
+        <h2 class="text-center mt-4">Simulador</h2>
+    <div class="form-group text-center">
+        <label for="valorVenda">Valor da Venda:</label>
+        <div class="row">
+            <div class="col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4 col-lg-4 offset-lg-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">R$</span>
+                    </div>
+                    <input type="text" class="form-control" id="valorVenda" name="valorVenda" required>
+                </div>
+            </div>
+        </div>
+    </div>
+<form id="client-form" class="mx-auto mt-5 text-center" style="max-width: 600px;">
+      <div class="form-group text-center">
+        <label for="name">Juros por conta:</label>
+      </div>
+      <div class="form-group text-center">
+        <div class="d-flex justify-content-center">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="responsavelJuros" id="marceneiro" value="marceneiro" required>
+            <label class="form-check-label" for="marceneiro">Marceneiro</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="responsavelJuros" id="cliente" value="cliente" required>
+            <label class="form-check-label" for="cliente">Cliente</label>
+          </div>
+        </div>
+      </div>
+    <br/>
+
+    <div class="form-group text-center">
+        <label for="name">Forma de Pagamento:</label>
+      </div>
+     <div class="form-group text-center">
+      <div class="d-flex justify-content-center">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="formaPagamento" id="debito" value="debito" required>
+          <label class="form-check-label" for="debito">Débito</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="formaPagamento" id="credito" value="credito" required>
+          <label class="form-check-label" for="credito">Crédito</label>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group text-center" id="parcelasDiv" style="display: none;">
+      <label for="parcelas">Quantidade de Parcelas:</label>
+      <div style="width: 150px; margin: auto;">
+        <select class="form-control" id="parcelas" name="parcelas">
+          <option value="1">1 Parcela</option>
+        </select>
+      </div>
+    </div>
+    <br/>
+    <button type="button" id="btnCalcular" class="btn btn-primary">Calcular</button>
+  
+    <div class="resultados">
+      <p id="valorTotal"></p>
+      <p id="valorDinheiro"></p>
+      <p id="valorMaterial"></p>
+      <p id="taxaJuros"></p>
+    </div>
+  </form>
+  
+    
+    <br/>
+  </div>
+
+<footer class="footer">
+    <div class="container-fluid text-white text-center py-3">
+        <p>Compensados Baixinho © - 2023 Todos os direitos reservados<br>
+    </div>
+</footer>
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
